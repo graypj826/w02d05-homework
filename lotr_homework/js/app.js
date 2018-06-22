@@ -83,9 +83,6 @@ const makeHobbits = () => {
 };
 
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 2 complete - Made the Hobbits".
-
 // ============
 // Chapter 3
 // ============
@@ -95,27 +92,38 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   const $theRing = $('<div id="theRing"/>');
-  
 
-  // 2. add the ring as a child of Frodo
   $("li").first().append($theRing);
 
 
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
-
 // ============
 // Chapter 4
 // ============
+
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
+// const $unorderedBaddies = $('<ul/>');
+//   $('#Mordor').append($unorderedBaddies)  
+  
+//   for (let i = 0; i < baddies.length; i++){
+//     const $demBaddies = $('<li>');
+//     $demBaddies.text(baddies[i]);
+//     $unorderedBaddies.append($demBaddies);
+//     $demBaddies.attr('id','hobbit');
+// }
 
-  // 2. give each of the baddies a class of "baddy"
+const $unorderedBaddies = $("<ul>");
+$("#Mordor").append($unorderedBaddies)
 
-  // 3. remember to append them to Mordor
+for(let i = 0; i < baddies.length; i++){
+  const $demBaddies = $("<li></li>")
+  $demBaddies.text(baddies[i]);
+  $unorderedBaddies.append($demBaddies);
+  $demBaddies.attr('id','baddy');
+}
 };
 
 // COMMIT YOUR WORK
