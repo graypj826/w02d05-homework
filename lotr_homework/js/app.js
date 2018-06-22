@@ -93,27 +93,17 @@ const keepItSecretKeepItSafe = () => {
 
   const $theRing = $('<div id="theRing"/>');
 
-  $("li").first().append($theRing);
+  $("li : contains('Frodo')").append($theRing);
 
-
+//$("li").first() works but not as stable as above
 };
+
 
 // ============
 // Chapter 4
 // ============
 
 const makeBaddies = () => {
-
-  // 1. display an unordered list of baddies in Mordor
-// const $unorderedBaddies = $('<ul/>');
-//   $('#Mordor').append($unorderedBaddies)  
-  
-//   for (let i = 0; i < baddies.length; i++){
-//     const $demBaddies = $('<li>');
-//     $demBaddies.text(baddies[i]);
-//     $unorderedBaddies.append($demBaddies);
-//     $demBaddies.attr('id','hobbit');
-// }
 
 const $unorderedBaddies = $("<ul>");
 $("#Mordor").append($unorderedBaddies)
@@ -134,25 +124,28 @@ for(let i = 0; i < baddies.length; i++){
 // ============
 const makeBuddies = () => {
 
-  // 1. create an aside tag and append it to middle-earth below mordor
 
-  // 2. display an unordered list of buddies in the aside
+const $aside = $('<aside></>');
+$("#middleEarth").append($aside);
 
-  // 3. give each of the buddies a class of "buddy"
+const $unorderedBuddies = $("<ul></>")
+$aside.append($unorderedBuddies)
 
+for(let i = 0; i < buddies.length; i++){
+  const $demBuddies = $('<li>');
+  $demBuddies.text(buddies[i]);
+  $unorderedBuddies.append($demBuddies);
+  $demBuddies.attr("class","buddy");
+}
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 5 complete - Made the Buddies".
 
 // ============
 // Chapter 6
 // ============
 const leaveTheShire = () => {
 
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+  const $travelin = $("#The-Shire").find("ul")
+  $("#Rivendell").append($travelin);
 
 };
 
