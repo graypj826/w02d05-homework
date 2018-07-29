@@ -157,21 +157,23 @@ const beautifulStranger = () => {
   $("li:contains('Strider')").text('Aragorn');
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
-
 // ============
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
 
-  // 1. create a new div with an id 'the-fellowship'
+  const $theFellowshipDiv = $("<div id='the-fellowship'></div>")
+  const $theFellowshipH1 = $("<h1> the fellowship </h1>")
 
-  // 2. add an h1 with the text 'The Fellowship' to this new div
+  $("#middleEarth").append($theFellowshipDiv);
 
-  // 3. append the fellowship to middle-earth
+  $theFellowshipDiv.append($theFellowshipH1)
+  
+  const $hobbitsTravelin = $("#Rivendell").find("ul")
+  $theFellowshipDiv.append($hobbitsTravelin);
 
-  // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+  const $buddiesTravelin = $("aside").find("ul")
+  $theFellowshipDiv.append($buddiesTravelin);
 
 };
 
