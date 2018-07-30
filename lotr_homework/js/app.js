@@ -219,7 +219,7 @@ const itsDangerousToGoAlone = () => {
   
   $("#Mordor").append($frodoTravelin);
 
-  const $samTravelin = $("#hobbit").first()
+  const $samTravelin = $('li:contains("Samwise \'Sam\' Gamgee")')
 
   $("#Mordor").append($samTravelin);
 
@@ -236,7 +236,7 @@ const itsDangerousToGoAlone = () => {
 // ============
 const weWantsIt = () => {
 
-   const $gollumDiv = $("<div id='gollum'></div>");
+   const $gollumDiv = $("<div id='gollum'> Gollum </div>");
 
   $("#theRing").remove();
 
@@ -246,9 +246,6 @@ const weWantsIt = () => {
   
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
-
 // ============
 // Chapter 13
 // ============
@@ -256,11 +253,24 @@ const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
 
+$("#theRing").remove();
+
   // 2. remove all the baddies from the DOM
+
+$("#mordor ul").remove();
 
   // 3. Move all the hobbits back to the shire
 
+// const $mordorHobbits =$("#Mordor #hobbit")
+
+// $("#The-Shire").append($mordorHobbits)
+
+const $hobbits =$("li#hobbit")
+
+$("#The-Shire").append($hobbits)
+
 };
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
