@@ -116,9 +116,6 @@ for(let i = 0; i < baddies.length; i++){
 }
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
-
 // ============
 // Chapter 5
 // ============
@@ -206,8 +203,7 @@ const hornOfGondor = () => {
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
-  $("li:contains('The Uruk-Hai')").addClass("SeeYA");
-  
+  $("li:contains('The Uruk-hai')").remove();
 
 };
 
@@ -223,7 +219,7 @@ const itsDangerousToGoAlone = () => {
   
   $("#Mordor").append($frodoTravelin);
 
-  const $samTravelin = ("li:contains('Samwise \' Sam \' Gamgee')")
+  const $samTravelin = $("#hobbit").first()
 
   $("#Mordor").append($samTravelin);
 
@@ -235,20 +231,19 @@ const itsDangerousToGoAlone = () => {
 
 };
 
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
-
 // ============
 // Chapter 12
 // ============
 const weWantsIt = () => {
 
-  // 1. Create a div with an id of 'gollum' and add it to Mordor
+   const $gollumDiv = $("<div id='gollum'></div>");
 
-  // 2. Move the ring from Frodo and give it to Gollum
+  $("#theRing").remove();
 
-  // 3. Move Gollum into Mount Doom
-
+  $gollumDiv.attr("id", "theRing");
+  
+  $("#mount-doom").append($gollumDiv);
+  
 };
 
 // COMMIT YOUR WORK
