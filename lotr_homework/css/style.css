@@ -21,3 +21,6 @@ button {
 	border: 3px solid gray;
 }
 
+.dead{
+	text-decoration: line-through;
+}
