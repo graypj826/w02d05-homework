@@ -206,21 +206,32 @@ const hornOfGondor = () => {
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
-  $("li:contains('The Uruk-Hai')").remove();
+  $("li:contains('The Uruk-Hai')").addClass("SeeYA");
+  
 
 };
-
-// COMMIT YOUR WORK
-// The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
 // ============
 // Chapter 11
 // ============
+
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+  const $frodoTravelin = $("li:contains('Frodo Baggins')")
+  
+  $("#Mordor").append($frodoTravelin);
+
+  const $samTravelin = ("li:contains('Samwise \' Sam \' Gamgee')")
+
+  $("#Mordor").append($samTravelin);
+
   // 2. add a div with an id of 'mount-doom' to Mordor
+
+  const $mountDoom = $("<div id='mount-doom'></div>")
+  
+  $("#Mordor").append($mountDoom)
 
 };
 
